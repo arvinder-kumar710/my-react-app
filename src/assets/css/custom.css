@@ -10,4 +10,14 @@
     border: 1px solid red;
     box-shadow: 0 0 3px red;
   }
+  .header {
+  background-color: #a4c991;
+  padding: 10px 20px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
   

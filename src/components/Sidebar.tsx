@@ -13,7 +13,7 @@ const Sidebar: React.FC = () => {
     const[isExam,setIsExam] =useState(false);
 
     return (
-        <div className="d-flex flex-column p-3 text-white bg-dark vh-100" style={{ width: "250px" }}>
+        <div className="d-flex flex-column p-3 text-white bg-dark vh-100" style={{ width: "500px" }}>
             <h4 className="text-center">RMS School</h4>
             <ul className="nav nav-pills flex-column">
                 {/* Dashboard with Submenu */}
@@ -76,17 +76,17 @@ const Sidebar: React.FC = () => {
                     {isStudentOpen && (
                         <ul className="nav flex-column ms-3">
                             <li className="nav-item">
-                                <Link to="/students" className="nav-link text-white">
+                                <Link to="/dashboard/students" className="nav-link text-white">
                                 <span><i className="fi fi-rr-arrow-right"></i>All Students</span>
                                 </Link>
                             </li>
                             <li className="nav-item">
-                                <Link to="/about-atudent" className="nav-link text-white">
+                                <Link to="/dashboard/about-student" className="nav-link text-white">
                                 <span><i className="fi fi-rr-arrow-right"></i>Student Details</span>
                                 </Link>
                             </li>
                             <li className="nav-item">
-                                <Link to="/studetn-adminsion-form" className="nav-link text-white">
+                                <Link to="/dashboard/studetn-adminsion-form" className="nav-link text-white">
                                 <span><i className="fi fi-rr-arrow-right"></i>Admission Form</span>
                                 </Link>
                             </li>
