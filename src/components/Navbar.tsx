@@ -5,7 +5,7 @@ const Navbar: React.FC = () => {
     const navigate = useNavigate(); //✅ Needed to redirect after logout
     const handleLogout = () =>{
         localStorage.removeItem("isAuthenticated"); //✅ Clear login flag
-        navigate("/"); // ✅ Redirect to login page
+        navigate("/login"); // ✅ Redirect to login page
     }
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light px-4">

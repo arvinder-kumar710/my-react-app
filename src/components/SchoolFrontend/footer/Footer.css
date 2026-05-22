@@ -1,0 +1,248 @@
+/* Base Footer Styling */
+.eduka-footer {
+  background-color: #0b1a3d; /* Dark blue background */
+  color: #c0c0c0; /* Light grey text color for general content */
+  position: relative;
+  overflow: hidden; /* Hide the extra pattern overflow */
+  padding-bottom: 50px; /* Space for the back-to-top button */
+}
+
+/* Subtle Background Pattern (Stylized Books) */
+.eduka-footer::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%; /* Or adjust to fit your design */
+  max-width: 1200px; /* Control max width of the pattern */
+  height: 250px; /* Adjust height of the pattern */
+  background-image: url('/images/footer-pattern.png'); /* Replace with your actual image path */
+  background-size: contain; /* Or 'cover' or specific dimensions */
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  opacity: 0.1; /* Make it subtle */
+  z-index: 0; /* Ensure it's behind content */
+}
+
+.eduka-footer .container {
+  position: relative; /* Ensure container content is above the pseudo-element */
+  z-index: 1;
+}
+
+/* Logo and Description */
+.footer-logo {
+  display: flex;
+  align-items: center;
+}
+
+.footer-logo img {
+  filter: brightness(0) invert(1); /* Makes a dark logo white */
+}
+
+.footer-logo .logo-text {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.footer-description {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Contact List */
+.footer-contact-list li {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: flex-start;
+  font-size: 0.95rem;
+}
+
+.footer-contact-list li:last-child {
+  margin-bottom: 0;
+}
+
+.footer-contact-list i {
+  color: #ff9900; /* Orange icon color */
+  font-size: 1.1rem;
+  min-width: 25px; /* Ensure icons align nicely */
+  margin-top: 2px; /* Fine-tune vertical alignment */
+}
+
+/* Headings */
+.footer-heading {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #fff; /* White heading color */
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.footer-heading::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -8px; /* Position the line below the heading */
+  width: 50px; /* Length of the line */
+  height: 3px;
+  background-color: #ff9900; /* Orange line */
+}
+
+/* Quick Links & Our Campus Links */
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: #c0c0c0; /* Light grey link color */
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+  display: flex;
+  align-items: center;
+}
+
+.footer-links a:hover {
+  color: #ff9900; /* Orange on hover */
+}
+
+.footer-links a i {
+  color: #ff9900; /* Orange icon color */
+  font-size: 0.8rem; /* Smaller chevron icon */
+}
+
+/* Newsletter Section */
+.newsletter-text {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.newsletter-input {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 0.75rem 1rem;
+  border-radius: 5px;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+.newsletter-input::placeholder {
+  color: #888;
+}
+
+.newsletter-input:focus {
+  border-color: #ff9900;
+  box-shadow: 0 0 0 0.25rem rgba(255, 153, 0, 0.25);
+  background-color: #fff;
+  color: #333;
+}
+
+.subscribe-btn {
+  background-color: #ff9900 !important;
+  border-color: #ff9900 !important;
+  color: #fff !important;
+  font-weight: 600;
+  padding: 0.75rem 1rem;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-size: 0.95rem;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.subscribe-btn:hover {
+  background-color: #e68a00 !important;
+  border-color: #e68a00 !important;
+  color: #fff !important;
+}
+
+.subscribe-btn i {
+  font-size: 1rem;
+}
+
+/* Footer Bottom (Copyright & Social) */
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1); /* Subtle separator line */
+  padding-top: 1.5rem;
+}
+
+.copyright-text {
+  font-size: 0.9rem;
+  color: #c0c0c0;
+}
+
+.copyright-text .text-warning {
+  color: #ff9900 !important; /* Ensure orange for "Eduka" */
+}
+
+.social-icons .social-icon {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+  color: #fff;
+  font-size: 1.1rem;
+  border-radius: 5px; /* Square with slight round */
+  margin-left: 10px; /* Spacing between icons */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.social-icons .social-icon:hover {
+  background-color: #ff9900; /* Orange on hover */
+  color: #fff;
+}
+
+/* Back to Top Button */
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: #ff9900; /* Orange background */
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000; /* Ensure it's on top */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  border: none;
+}
+
+.back-to-top:hover {
+  background-color: #e68a00; /* Darker orange on hover */
+  transform: translateY(-3px); /* Slight lift effect */
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 991.98px) {
+  .footer-heading::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .footer-logo,
+  .footer-description,
+  .footer-contact-list,
+  .footer-links,
+  .newsletter-text,
+  .footer-bottom p,
+  .social-icons {
+    text-align: center;
+  }
+  .footer-contact-list li {
+    justify-content: center;
+  }
+  .social-icons {
+    justify-content: center;
+  }
+  .social-icons .social-icon {
+    margin: 0 5px; /* Adjust spacing for mobile */
+  }
+}

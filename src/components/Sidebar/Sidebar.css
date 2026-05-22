@@ -1,0 +1,65 @@
+/* Sidebar General Styling */
+.sidebar {
+    width: 260px; /* Standard sidebar width */
+    background-color: #1a1d21 !important; /* Professional Dark Grey/Black */
+    transition: all 0.3s;
+    overflow-y: auto;
+}
+
+/* Custom Nav spacing */
+.custom-nav .nav-item {
+    margin-bottom: 5px;
+}
+
+/* Button & Link Styling */
+.btn-toggle {
+    padding: 10px 15px;
+    font-size: 1rem;
+    transition: background 0.2s;
+}
+
+.btn-toggle:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Arrow Icon Transition */
+.arrow-icon {
+    font-size: 0.8rem;
+    transition: transform 0.3s ease;
+}
+
+.arrow-icon.rotate {
+    transform: rotate(180deg);
+}
+
+/* Sub-menu (Collapse) Styling */
+.collapse-menu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    background-color: rgba(0, 0, 0, 0.2); /* Darker background for sub-items */
+}
+
+.collapse-menu.show {
+    max-height: 500px; /* Adjust based on content */
+    transition: max-height 0.5s ease-in;
+}
+
+.btn-toggle-nav a {
+    padding: 8px 15px;
+    display: block;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.btn-toggle-nav a:hover {
+    color: #ffc107 !important; /* Gold/Yellow hover for sub-items */
+    padding-left: 20px; /* Small slide effect on hover */
+    transition: all 0.2s;
+}
+
+/* Active State for Parent */
+.active-parent {
+    border-left: 4px solid #ffc107; /* Highlight active section */
+    background-color: rgba(255, 255, 255, 0.05);
+}

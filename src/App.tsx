@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Login from './Login';
+import Login from './components/SchoolFrontend/login/Login';
 import DashboardLayout from './DashboardLayout';
 import Dashboard from './components/Dashboard';
 import ProtectedRoute from "./components/ProtectedRoute";
@@ -25,15 +25,13 @@ import All_class from "./pages/class/All_class";
 import Add_new_class from "./pages/class/Add_new_class";
 import AllSubjects from "./pages/AllSubjects";
 import StudentForm from "./pages/StudentForm";
-import Header from "./school-frontend/Header";
-
+import HomePage from "./components/SchoolFrontend/HomePage";
 const App: React.FC = () => {
   return (
     <Router>
       <Routes>
-       <Route path="/" element={<Header />} />
-
-        <Route path="login" element={<Login />} />
+        <Route path="/" element={<HomePage />} />
+        <Route path="/login" element={<Login />} />
 
         {/* Dashboard layout */}
         <Route path="/dashboard"  element={

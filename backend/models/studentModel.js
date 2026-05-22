@@ -1,5 +1,3 @@
-// models/studentModel.js
-
 import db from "../config/db.js";
 
 // ✅ Insert student

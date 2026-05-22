@@ -1,0 +1,196 @@
+/* --- Testimonials Section Styling --- */
+.testimonials-section {
+  background-color: #fff;
+  padding: 80px 0;
+  overflow-x: hidden; /* Hide horizontal scroll if any */
+}
+
+.testimonials-section .section-title {
+  color: #333;
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+/* --- Carousel Wrapper (Dotted Border) --- */
+.testimonials-carousel-wrapper {
+  position: relative;
+  background-image: url('/images/lined_paper.png'); /* ⬅️ Set the background image */
+  background-color: #f8f8f8; /* Fallback color */
+  background-repeat: repeat; /* Repeat the image to cover the whole area */
+  background-size: auto; /* Use original size for a patterned effect */
+  padding: 40px 0 60px 0; /* Adjust padding inside the dotted border */
+  border: 1px dashed #f1eef1; /* Light grey dotted border */
+  border-radius: 10px;
+  max-width: 1200px; /* Limit width of the carousel wrapper */
+  margin: 0 auto; /* Center the wrapper */
+}
+
+/* --- Custom Carousel Arrows (Pink) --- */
+.testimonials-carousel-wrapper .carousel-control-prev,
+.testimonials-carousel-wrapper .carousel-control-next {
+  width: 45px; /* Size of the circular arrow button */
+  height: 45px;
+  background-color: #ec417d; /* Pink background */
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1; /* Always visible, as per image */
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  transition: background-color 0.3s ease;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-inline: -20px; /* Pull arrows slightly outside the border */
+}
+
+.testimonials-carousel-wrapper .carousel-control-prev:hover,
+.testimonials-carousel-wrapper .carousel-control-next:hover {
+  background-color: #d1306b; /* Darker pink on hover */
+}
+
+.testimonials-carousel-wrapper .carousel-control-prev-icon,
+.testimonials-carousel-wrapper .carousel-control-next-icon {
+  background-image: none; /* Remove default Bootstrap icon */
+  font-size: 1.5rem; /* Size of the custom icon */
+  color: #fff; /* White icon color */
+  line-height: 1; /* Center the icon correctly */
+}
+
+/* Specific positioning for prev/next */
+.testimonials-carousel-wrapper .carousel-control-prev {
+  left: 0;
+  margin-left: -20px; /* Adjust as needed */
+}
+.testimonials-carousel-wrapper .carousel-control-next {
+  right: 0;
+  margin-right: -20px; /* Adjust as needed */
+}
+
+/* --- Carousel Indicators (Pink Dots) --- */
+.testimonials-carousel-wrapper .carousel-indicators [data-bs-target] {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #d1d1d1; /* Light grey for inactive dots */
+  border: none;
+  opacity: 1; /* Keep dots visible */
+  margin: 0 5px; /* Spacing between dots */
+  transition: background-color 0.3s ease;
+}
+
+.testimonials-carousel-wrapper .carousel-indicators .active {
+  background-color: #ec417d; /* Pink for active dot */
+}
+
+
+/* --- Testimonial Card Styling --- */
+.testimonial-card-col {
+  padding: 0 20px; /* Adjust spacing between cards in a pair */
+}
+
+.testimonial-card {
+  border-radius: 8px;
+  text-align: center;
+  padding: 30px;
+  margin-bottom: 20px; /* Space between rows of cards on smaller screens */
+  /* Remove shadow, as the design seems to have flat cards within the dotted border */
+}
+
+.testimonial-header {
+  margin-bottom: 20px;
+}
+
+.testimonial-img {
+  width: 120px; /* Size of the circular image */
+  height: 120px;
+  border-radius: 50%; /* Make it circular */
+  object-fit: cover; /* Ensure image covers the circle */
+  border: 4px solid #fff; /* White border around the image */
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* Subtle shadow around image */
+}
+
+.quote-icon {
+  color: #ec417d; /* Pink quote icon */
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.testimonial-quote {
+  color: #666;
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+.testimonial-author {
+  color: #333;
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 0;
+  display: flex; /* For icon alignment */
+  align-items: center;
+  justify-content: center;
+}
+
+.testimonial-author i {
+    color: #ec417d; /* Pink person icon */
+    margin-right: 8px;
+    font-size: 1.2rem;
+}
+
+.testimonial-title {
+  color: #ec417d; /* Pink for the title */
+  font-weight: 500;
+  margin-left: 5px;
+}
+
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 991.98px) {
+  .testimonials-carousel-wrapper {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  /* Stack testimonials on smaller screens */
+  .carousel-item-custom .row {
+    flex-direction: column;
+    align-items: center;
+  }
+  .testimonial-card-col {
+    max-width: 80%; /* Limit card width on mobile */
+    padding: 0 15px; /* Adjust padding for mobile */
+  }
+
+  .testimonials-carousel-wrapper .carousel-control-prev,
+  .testimonials-carousel-wrapper .carousel-control-next {
+    margin-inline: 0; /* Keep arrows closer on mobile */
+    top: auto;
+    bottom: 20px; /* Position arrows at the bottom */
+    transform: translateY(0);
+    opacity: 0.7; /* Make them slightly less prominent */
+  }
+
+  .testimonials-carousel-wrapper .carousel-control-prev {
+      left: 30%;
+  }
+  .testimonials-carousel-wrapper .carousel-control-next {
+      right: 30%;
+  }
+
+  .testimonials-carousel-wrapper .carousel-indicators {
+      bottom: -40px; /* Move indicators below the wrapper */
+  }
+}
+
+@media (max-width: 767.98px) {
+    .testimonials-carousel-wrapper .carousel-control-prev {
+        left: 20%;
+    }
+    .testimonials-carousel-wrapper .carousel-control-next {
+        right: 20%;
+    }
+}

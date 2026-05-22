@@ -1,0 +1,183 @@
+/* --- Gallery Section Styling --- */
+.photo-gallery-section {
+  background-color: #f7f7f7; /* Light background */
+  padding: 80px 0;
+}
+
+/* Header Styling */
+.section-header {
+  max-width: 600px;
+  margin: 0 auto 50px auto;
+}
+
+.section-subtitle {
+  color: #ff9900; /* Orange subtitle */
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.section-subtitle .header-icon {
+    font-size: 1.2rem;
+    margin-right: 5px;
+}
+
+.section-title {
+  color: #333; 
+  font-size: 2.8rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.section-title .text-orange {
+  color: #ff9900; /* Orange highlight */
+}
+
+.section-description {
+  color: #666;
+  font-size: 1rem;
+}
+
+/* --- Gallery Grid Items --- */
+.gallery-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px; /* Highly rounded corners */
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.gallery-item:hover .gallery-image {
+  transform: scale(1.05);
+}
+
+/* Image Overlay (Zoom effect on hover) */
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* Dark overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 15px;
+}
+
+.gallery-item:hover .image-overlay {
+  opacity: 1;
+}
+
+.image-overlay i {
+  color: white;
+  font-size: 2rem;
+}
+
+/* --- Lightbox Modal Carousel Styling --- */
+
+/* Target the full modal dialog */
+.gallery-modal-dialog {
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  max-width: 100vw;
+}
+
+/* Target the modal content itself (the box inside the dialog) */
+.gallery-modal-content {
+  background-color: rgba(0, 0, 0, 0.9); /* Dark semi-transparent background */
+  border: none;
+  height: 100vh;
+  border-radius: 0;
+}
+
+/* Ensure Carousel items fill the modal body */
+.modal-body {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel {
+  width: 100%;
+  height: 100%;
+}
+
+/* Custom styling for the image inside the carousel slide */
+.modal-carousel-image {
+  max-width: 90vw;
+  max-height: 90vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+/* Custom Modal Navigation Arrows */
+.carousel-control-prev,
+.carousel-control-next {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.2);
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 1; /* Always visible */
+  transition: background-color 0.3s ease;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+/* Custom Close Button (Top right X) */
+.modal-close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  line-height: 1;
+  opacity: 0.8;
+  z-index: 1060; /* Above the carousel */
+  cursor: pointer;
+  padding: 5px 10px;
+}
+
+.modal-close-btn:hover {
+  opacity: 1;
+}
+
+/* Custom Counter (Bottom right "1 of 6") */
+.modal-counter {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px 15px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  z-index: 1060;
+}

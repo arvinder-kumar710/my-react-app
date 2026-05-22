@@ -4,6 +4,7 @@ import cors from "cors";
 import path from "path";
 import studentRoutes from "./routes/studentRoutes.js";
 import loginRoutes from './routes/loginRoutes.js';
+import callbackRoutes from './routes/callbackRoutes.js';
 import { errorHandler } from "./middleware/errorHandler.js";
 
 dotenv.config();
@@ -17,6 +18,7 @@ app.use("/uploads", express.static("uploads"));
 // Routes
 app.use("/api/students", studentRoutes);
 app.use('/api', loginRoutes);
+app.use('/api/callback', callbackRoutes);
 
 // Error handler
 app.use(errorHandler);

@@ -1,0 +1,140 @@
+/* --- Education Cards Section Styling --- */
+.education-cards-section {
+  background-color: #fcf9f5; /* Light beige background */
+  padding: 80px 0; /* Vertical padding */
+}
+
+.education-cards-section .section-subtitle {
+  color: #a0a0a0; /* Grey subtitle */
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  letter-spacing: 1px;
+}
+
+.education-cards-section .section-title {
+  color: #333; /* Dark title */
+  font-size: 2.8rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.education-cards-section .section-title .text-orange {
+  color: #ff9900; /* Orange highlight */
+}
+
+/* --- Individual Education Card Styling --- */
+.education-card {
+  background-color: #fff; /* White background for the card */
+  border-radius: 10px;
+  overflow: hidden; /* Important for image rounding */
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08); /* Subtle shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%; /* Ensure cards in a row have equal height */
+  display: flex;
+  flex-direction: column;
+}
+
+.education-card:hover {
+  transform: translateY(-5px); /* Lift card slightly on hover */
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.card-image-wrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 60%; /* Aspect ratio (e.g., 60% of width for height) */
+  overflow: hidden;
+}
+
+.card-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Cover the area, cropping if necessary */
+  border-radius: 10px 10px 0 0; /* Rounded top corners only */
+  transition: transform 0.5s ease;
+}
+
+.education-card:hover .card-image {
+  transform: scale(1.05); /* Slight zoom on image hover */
+}
+
+.card-content {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* Allow content to fill remaining height */
+  position: relative; /* For icon/arrow positioning */
+}
+
+.icon-and-arrow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px; /* Space between icons/arrow and title */
+}
+
+.card-icon-wrapper {
+  width: 60px; /* Size of the circular icon background */
+  height: 60px;
+  background-color: #f7f3ed; /* Light beige background */
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05); /* Subtle shadow on icon circle */
+}
+
+.card-icon {
+  color: #1a716c; /* Dark teal/green icon color */
+  font-size: 1.8rem; /* Icon size */
+}
+
+.learn-more-arrow {
+  width: 40px; /* Size of the circular arrow button */
+  height: 40px;
+  background-color: #f7f3ed; /* Light beige background */
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ff9900; /* Orange arrow color */
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.learn-more-arrow:hover {
+  background-color: #ff9900; /* Orange background on hover */
+  color: #fff; /* White arrow on hover */
+}
+
+.card-title {
+  color: #333;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 991.98px) {
+  .education-cards-section .section-title {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .education-cards-section .section-title {
+    font-size: 2rem;
+  }
+  .education-card {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 350px; /* Limit card width on small screens */
+  }
+}

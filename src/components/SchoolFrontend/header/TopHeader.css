@@ -1,0 +1,108 @@
+/* --- OVERALL HEADER --- */
+.top-header {
+  width: 100%;
+  height: 45px; /* Pixel-perfect height */
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1;
+}
+
+/* --- LEFT SECTION --- */
+.top-header-left {
+  background-color: #ff9900; /* Bright orange */
+  color: #fff;
+  padding-left: 120px;
+  height: 45px;
+}
+
+.follow-text {
+  font-weight: 600;
+  color: #fff;
+}
+
+.social-icons {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.social-icon-head {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 38px;
+  height: 38px;
+  background-color: #176963; /* Teal green circle */
+  color: #fff;
+  border-radius: 50%;
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+
+.social-icon-head:hover {
+  background-color: #0f4f4a;
+  color: #fff;
+}
+
+/* --- RIGHT SECTION --- */
+.top-header-right {
+  background-color: #176963;
+  color: #fff;
+  height: 45px;
+  padding-right: 120px;
+  padding-left: 20px;
+}
+
+.contact-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+.contact-item i {
+  color: #ff9900; /* Orange icons */
+  font-size: 16px;
+}
+
+/* --- SEPARATOR LINES --- */
+.separator {
+  width: 1px;
+  height: 18px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* --- RESPONSIVE DESIGN --- */
+@media (max-width: 767.98px) {
+  .top-header {
+    height: auto;
+    font-size: 13px;
+  }
+
+  .top-header-left,
+  .top-header-right {
+    text-align: center;
+    justify-content: center;
+    padding: 8px 0;
+  }
+
+  .contact-info {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .separator {
+    display: none;
+  }
+
+  .social-icons {
+    margin-top: 6px;
+  }
+}

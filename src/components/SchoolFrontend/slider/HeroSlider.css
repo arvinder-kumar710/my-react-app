@@ -1,0 +1,148 @@
+/* --- Slider Container & Background --- */
+
+.eduka-slider-container {
+  position: relative;
+  width: 100%;
+  /* Ensures the slider takes full width and manages its height */
+}
+
+.hero-slide-content-wrapper {
+  height: 600px; /* Adjust height as needed */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 1; /* For overlay stacking */
+}
+
+/* Dark Overlay Effect */
+.hero-slide-content-wrapper::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Use a dark color with transparency for the overlay */
+  background-color: rgba(0, 0, 0, 0.7); 
+  z-index: 2; /* Place the overlay above the image */
+}
+
+/* Ensure the content is above the overlay */
+.container {
+  position: relative;
+  z-index: 3;
+}
+
+/* --- Content Styling --- */
+
+.slider-text-box {
+  color: #fff;
+  max-width: 700px; /* Control the width of the text block */
+  padding-left: 20px; /* Space from the edge */
+}
+
+.slider-subtitle {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #ff9900; /* Orange color */
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.slider-subtitle i {
+  margin-right: 8px;
+}
+
+.slider-title {
+  font-size: 3.8rem; /* Large, bold font */
+  font-weight: 900;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.slider-title .highlight {
+  color: #ff9900; /* Orange highlight color */
+}
+
+.slider-text {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #ddd; /* Lighter text color for contrast */
+  margin-bottom: 30px;
+}
+
+/* --- Button Styling --- */
+
+.slider-buttons .btn {
+  font-weight: 600;
+  padding: 12px 30px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  margin-right: 15px;
+  transition: all 0.3s ease;
+}
+
+.custom-btn-orange {
+  background-color: #ff9900 !important;
+  border-color: #ff9900 !important;
+  color: #fff !important;
+}
+
+.custom-btn-orange:hover {
+  background-color: #e68a00 !important;
+  border-color: #e68a00 !important;
+}
+
+.custom-btn-white {
+  background-color: #fff !important;
+  border-color: #fff !important;
+  color: #333 !important;
+}
+
+.custom-btn-white:hover {
+  background-color: #f0f0f0 !important;
+  border-color: #f0f0f0 !important;
+}
+
+.slider-buttons .btn i {
+  margin-left: 8px;
+}
+
+/* --- Carousel Control Overrides (Arrows) --- */
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 50px;
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+  border-radius: 50%;
+  opacity: 1;
+  transition: background-color 0.3s ease;
+
+  /* Center vertically */
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.carousel-control-prev {
+  left: 20px; /* Adjust spacing from left */
+}
+
+.carousel-control-next {
+   right: 20px; /* Adjust spacing from right */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1) grayscale(100); /* Makes the default Bootstrap arrow white */
+  font-size: 1rem;
+}
+
+/* Use Bootstrap Icons for cleaner look (Optional) */
+/* You would need to add custom classes and elements if you want to swap the icons */
+/* For simplicity, we are using the default Bootstrap icons which are white by default. */

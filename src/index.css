@@ -1,1 +1,17 @@
-@import "tailwindcss";
+/* src/index.css or src/App.css */
+
+/* Must be at the very top */
+@import url('https://fonts.googleapis.com/css2?family=Yantramanav:wght@100;300;400;500;700;900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+/* Apply font to the entire application */
+body {
+    /* Use the primary font (e.g., Yantramanav for headings/main text) */
+    font-family: 'Yantramanav', sans-serif;
+    /* You can also use Roboto as a global fallback or for specific elements */
+}
+
+/* Example for headings */
+h1, h2, h3 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700; /* Assuming you want bold headings */
+}

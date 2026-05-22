@@ -1,0 +1,198 @@
+/* --- Our Sessions Section Styling --- */
+.our-sessions-section {
+  background-color: #6a0dad; /* Deep purple background */
+  padding: 80px 0; /* Vertical padding */
+  position: relative; /* For positioning background elements and dotted borders */
+  overflow: hidden; /* Hide anything that spills out, like absolute elements */
+  color: #fff; /* Default text color for the section */
+}
+
+/* Decorative Dotted Borders */
+.section-border-top,
+.section-border-bottom {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 20px; /* Adjust height as needed */
+  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%23fff' stroke-width='2' stroke-dasharray='4%2c 8' stroke-dashoffset='0'/%3e%3c/svg%3e");
+  background-size: 100% 100%; /* Ensure SVG covers the area */
+  opacity: 0.3; /* Subtle white dotted line */
+}
+
+.section-border-top {
+  top: 0;
+  border-top: 1px dotted rgba(255, 255, 255, 0.3); /* Fallback/additional subtle line */
+  /* Using SVG background-image for actual dotted line as shown in image */
+}
+
+.section-border-bottom {
+  bottom: 0;
+  border-bottom: 1px dotted rgba(255, 255, 255, 0.3); /* Fallback/additional subtle line */
+  /* Using SVG background-image for actual dotted line as shown in image */
+}
+
+
+/* --- Background Decorative Images --- */
+.session-ele-1 { /* Clouds image */
+  position: absolute;
+  top: 5%; /* Adjust position as needed */
+  left: 5%;
+  width: 150px; /* Adjust size */
+  height: auto;
+  z-index: 1; /* Ensure it's behind text but above section background */
+  opacity: 0.8;
+}
+
+.session-ele-2 { /* Paper plane image */
+  position: absolute;
+  top: 15%; /* Adjust position as needed */
+  right: 5%;
+  width: 200px; /* Adjust size */
+  height: auto;
+  z-index: 1;
+  opacity: 0.8;
+}
+
+/* --- Section Header Styling --- */
+.section-header {
+  position: relative;
+  z-index: 2; /* Ensure text is above background images */
+}
+
+.our-sessions-section .section-subtitle {
+  color: #fff; /* White subtitle */
+  opacity: 0.7; /* Slightly faded */
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  letter-spacing: 1px;
+}
+
+.our-sessions-section .section-title {
+  color: #fff; /* White title */
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 40px; /* Space above cards */
+}
+
+/* --- Session Cards Grid --- */
+.session-cards-grid {
+    max-width: 900px; /* Limit width of the card grid for better alignment */
+    margin: 0 auto;
+    position: relative;
+    z-index: 2; /* Ensure cards are above background elements */
+}
+
+.session-card {
+  background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle white border */
+  border-radius: 10px;
+  padding: 20px 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  backdrop-filter: blur(5px); /* Optional: Frosted glass effect */
+  -webkit-backdrop-filter: blur(5px); /* For Safari */
+  transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+  height: 100%; /* Ensure cards in a row are equal height */
+}
+
+.session-card:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* More opaque on hover */
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-3px); /* Slight lift on hover */
+}
+
+.session-info {
+  text-align: left;
+}
+
+.session-card .card-title {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.session-card .card-time {
+  color: #fff;
+  opacity: 0.8;
+  font-size: 0.95rem;
+  margin-bottom: 0;
+}
+
+.session-icon-wrapper {
+  background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent white background for icon circle */
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0; /* Prevent icon wrapper from shrinking */
+  margin-left: 20px;
+}
+
+.session-icon {
+  color: #fff; /* White icon */
+  font-size: 1.8rem;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 1200px) {
+    .session-ele-1 {
+        left: 2%;
+        width: 120px;
+    }
+    .session-ele-2 {
+        right: 2%;
+        width: 160px;
+    }
+}
+
+@media (max-width: 991.98px) {
+  .our-sessions-section {
+    padding: 60px 0;
+  }
+  .our-sessions-section .section-title {
+    font-size: 2.5rem;
+  }
+  .session-ele-1 {
+    top: 0;
+    left: 0;
+    width: 100px;
+  }
+  .session-ele-2 {
+    top: 5%;
+    right: 0;
+    width: 120px;
+  }
+  .session-cards-grid {
+      max-width: 600px; /* Allow wider cards on smaller screens */
+  }
+}
+
+@media (max-width: 767.98px) {
+  .our-sessions-section .section-title {
+    font-size: 2rem;
+  }
+  .session-card {
+    flex-direction: column; /* Stack info and icon on very small screens */
+    align-items: flex-start; /* Align text to left */
+  }
+  .session-icon-wrapper {
+    margin-left: 0;
+    margin-top: 15px; /* Space between info and icon */
+  }
+  .session-ele-1, .session-ele-2 {
+      display: none; /* Hide decorative elements on very small screens if they crowd content */
+  }
+}
+
+@media (max-width: 575.98px) {
+  .session-cards-grid .col-md-6 {
+    max-width: 90%; /* Full width cards on extra small screens */
+  }
+}

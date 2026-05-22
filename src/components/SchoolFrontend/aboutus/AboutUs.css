@@ -1,0 +1,155 @@
+/* --- About Us Section Styling --- */
+.about-us-section {
+  background-color: #fff; /* White background for the section */
+  padding: 80px 0; /* Adjust vertical padding as needed */
+}
+
+.text-content-column {
+  padding-right: 3rem; /* Spacing between text and image */
+}
+
+.welcome-subtitle {
+  color: #ff9900; /* Orange color */
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.section-title {
+  color: #333; /* Dark text */
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.section-description {
+  color: #666; /* Slightly lighter text for description */
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+/* --- Feature Buttons (Sports Training) --- */
+.feature-buttons .feature-btn {
+  background-color: #fff;
+  border: 1px solid #ddd; /* Light grey border */
+  color: #666;
+  font-weight: 500;
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  text-align: left; /* Align text to the left within the button */
+  display: flex; /* Use flex to align icon and text */
+  align-items: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05); /* Subtle shadow */
+  transition: all 0.3s ease;
+}
+
+.feature-buttons .feature-btn:hover {
+  background-color: #f8f9fa; /* Slightly darker background on hover */
+  border-color: #ff9900; /* Orange border on hover */
+  color: #ff9900; /* Orange text on hover */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.feature-buttons .feature-btn svg { /* Target the react-bootstrap-icons SVG */
+  color: #ff9900; /* Orange checkmark icon */
+  font-size: 1.1rem;
+}
+
+/* --- Call to Action Buttons --- */
+.explore-btn {
+  background-color: #ff9900 !important;
+  border-color: #ff9900 !important;
+  color: #fff !important;
+  font-weight: 600;
+  padding: 1rem 2.5rem;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.explore-btn:hover {
+  background-color: #e68a00 !important;
+  border-color: #e68a00 !important;
+}
+
+.explore-btn svg { /* Target the react-bootstrap-icons SVG */
+  font-size: 1rem;
+}
+
+
+.call-now-box {
+  display: flex;
+  align-items: center;
+}
+
+.call-icon-wrapper {
+  background-color: #ff9900; /* Orange background for the circle */
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0; /* Prevent it from shrinking */
+  box-shadow: 0 5px 15px rgba(255,153,0,0.3);
+}
+
+.call-icon {
+  color: #fff; /* White phone icon */
+  font-size: 1.5rem;
+}
+
+.call-us-text {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.phone-number {
+  color: #333;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+/* --- Image Column --- */
+.image-column img {
+  border-radius: 10px; /* Slight round on image corners */
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 991.98px) {
+  .text-content-column {
+    padding-right: 15px; /* Adjust padding for smaller screens */
+    text-align: center; /* Center text on smaller screens */
+  }
+
+  .text-content-column .d-flex {
+    justify-content: center !important; /* Center CTA buttons */
+  }
+
+  .section-title {
+    font-size: 2rem; /* Slightly smaller title on mobile */
+  }
+
+  .feature-buttons .feature-btn {
+    text-align: center; /* Center button text on mobile */
+    justify-content: center; /* Center icon and text within button */
+  }
+
+  .image-column {
+    text-align: center; /* Center image on mobile */
+  }
+}
+
+@media (max-width: 575.98px) {
+    .explore-btn {
+        width: 100%; /* Full width for explore button on very small screens */
+    }
+    .call-now-box {
+        margin-top: 15px; /* Space between stacked buttons */
+        justify-content: center; /* Center call box */
+    }
+}
