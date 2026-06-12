@@ -43,13 +43,18 @@ const AllSubjects: React.FC = () => {
     { id: '#0028', subject_name: 'Bangla', subject_type: 'Theory', class: 6, code: '0052', date: '02/05/2001' },
   ];
 
-  const handleFormChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
-  ) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-    setErrors((prev) => ({ ...prev, [name]: '' })); // Clear error on input change
-  };
+ const handleFormChange = (
+  e: React.ChangeEvent<
+    HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement
+  >
+) => {
+  const { name, value } = e.target;
+
+  setFormData((prev) => ({
+    ...prev,
+    [name]: value,
+  }));
+};
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();

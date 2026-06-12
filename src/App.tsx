@@ -34,7 +34,7 @@ const App: React.FC = () => {
         <Route path="/login" element={<Login />} />
 
         {/* Dashboard layout */}
-        <Route path="/dashboard"  element={ 
+        <Route path="/dashboard"  element={
                         <ProtectedRoute>
                             <DashboardLayout />
                         </ProtectedRoute>
