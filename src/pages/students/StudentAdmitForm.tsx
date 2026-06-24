@@ -152,7 +152,7 @@ const StudentAdmitForm: React.FC = () => {
 
       console.log("Submitting form data:", formData);
 
-      const response = await axios.post(API_BASE_URL+"/students/add", data, {
+      const response = await axios.post(API_BASE_URL+"/students/add", data, { 
         headers: {
           "Content-Type": "multipart/form-data",
         },
