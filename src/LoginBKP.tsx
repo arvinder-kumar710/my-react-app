@@ -7,8 +7,8 @@ const Login: React.FC = () => {
   const [email, setEmail] = useState('john.doe@gmail.com');
   const [password, setPassword] = useState('password123');
   const [error, setError] = useState('');
-  const API_BASE_URL = import.meta.env.API_BASE_URL;
-
+ const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
+console.log("here",API_BASE_URL);
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
     setError('');

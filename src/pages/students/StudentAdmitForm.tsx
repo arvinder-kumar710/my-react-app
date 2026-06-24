@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Form, Button, Row, Col } from 'react-bootstrap';
 import axios from 'axios';
-
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 const StudentAdmitForm: React.FC = () => {
   const [formData, setFormData] = useState({
     firstName: '',
@@ -25,7 +25,7 @@ const StudentAdmitForm: React.FC = () => {
   // 👇 DUPLICATE FIELD CHECK FUNCTION
   const checkDuplicateField = async (field: string, value: string) => {
     try {
-      const response = await axios.post('http://localhost:5000/api/students/check-duplicates', {
+      const response = await axios.post(API_BASE_URL+'/students/check-duplicates', {
         roll: field === "roll" ? value : formData.roll,
         email: field === "email" ? value : formData.email,
         admissionId: field === "admissionId" ? value : formData.admissionId,
@@ -152,7 +152,7 @@ const StudentAdmitForm: React.FC = () => {
 
       console.log("Submitting form data:", formData);
 
-      const response = await axios.post("http://localhost:5000/api/students/add", data, {
+      const response = await axios.post(API_BASE_URL+"/students/add", data, {
         headers: {
           "Content-Type": "multipart/form-data",
         },

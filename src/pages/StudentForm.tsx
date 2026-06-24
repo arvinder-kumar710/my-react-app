@@ -1,6 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
-
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 const StudentForm = () => {
   const [form, setForm] = useState({
     name: "",
@@ -16,7 +16,7 @@ const StudentForm = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:5000/api/students", form);
+      const res = await axios.post(API_BASE_URL+"/students", form);
       alert("Student registered! ID: " + res.data.studentId);
     } catch (err) {
       console.error("Error:", err);

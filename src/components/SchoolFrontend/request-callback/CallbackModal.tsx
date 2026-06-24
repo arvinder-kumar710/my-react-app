@@ -10,7 +10,7 @@ const countryCodes = [
   { code: '+44', flag: '🇬🇧' },  // UK
   { code: '+61', flag: '🇦🇺' },  // Australia
 ];
-
+ const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 const CallbackModal: React.FC = () => {
   const [show, setShow] = useState(true);
   const [formData, setFormData] = useState({
@@ -64,7 +64,7 @@ const CallbackModal: React.FC = () => {
 
       // 3. Send Request (Adjusted URL to match your route file)
       const response = await axios.post(
-        "http://localhost:5000/api/callback/add", 
+        API_BASE_URL+"/callback/add", 
         payload, 
         {
           // We use application/json, NOT multipart/form-data, since there are no files.
