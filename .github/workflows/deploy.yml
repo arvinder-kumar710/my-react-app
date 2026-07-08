@@ -23,5 +23,6 @@ jobs:
           script: |
             cd /var/www/my-react-app
             git pull origin main
+            cd backend
             npm install
             pm2 restart RohitServer
